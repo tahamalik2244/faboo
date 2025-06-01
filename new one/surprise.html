@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Surprise 💘</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 10px;
+      background: linear-gradient(to right, #ffdde1, #fce1e4);
+      font-family: 'Dancing Script', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .message {
+      background: white;
+      padding: 60px 20px;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      max-width: 600px;
+      width: 100%;
+      animation: fadeIn 1.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .her-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.5);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #e11d48;
+      font-size: 2.2rem;
+      animation: glow 3s ease-in-out infinite;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #6b7280;
+      margin: 10px 0 30px 0;
+      padding: 0 10px;
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      box-shadow: none;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    button:hover {
+      background-color: #e11d48;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-100px); opacity: 0.8; }
+      100% { transform: translateY(-200px); opacity: 0; }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #ff8fab, 0 0 20px #ff8fab; }
+      50% { text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      color: #ff4d6d;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @media (max-width: 480px) {
+      .message {
+        padding: 40px 15px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      button {
+        font-size: 1rem;
+      }
+
+      .her-photo {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <img class="her-photo" src="pic.jpg" alt="Your beautiful photo 💕">
+    <h2>Surprise! 🎉</h2>
+    <p>
+      My Love,<br><br>
+      I love you more than words can say. You’re not just special—you’re my whole world, my favorite thought, and the best part of every day. Every smile you give me lights up my heart like nothing else ever could.<br>
+      You’re my sweetest addiction, and I never want to let you go.
+      So, get ready… for our beautiful life, the best is yet to come. 😉
+      You are sooo pretty for me—honestly, there’s no girl in the whole world more beautiful than you. You are my today, my tomorrow, and my always. 💖
+    </p>
+    <button onclick="location.href='surprise2.html'">Open Another Surprise ❤️</button>
+  </div>
+
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = Math.random() * 100 + 'vh';
+      heart.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
